@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<link href="css/test.css" rel="stylesheet" type="text/css" />
+
+<html lang="ja">
+
+<head>
+
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	
+	<title>ログイン画面</title>
+
+</head>
+
+<style>
+
+	button{
+	  display:block;
+	  margin: 0 auto;
+	}
+	
+</style>
+
+<body>
+	
+	<div>
+
+	<!--フォーム-->
+    <form name="login_form">
+    
+        <center>
+        
+            <h1 class="contact-title">MTV開票システム</h1>
+                       
+        </center>
+        
+        <div>
+
+            <center>
+            
+                <div>
+                    <input type="id" name="id" placeholder="ユーザー名">
+                </div>
+                
+                <br>
+                
+                <div>
+                    <input type="password" name="pass" placeholder="パスワード" onchange="nextPage()">
+                </div>
+            </center>
+
+        </div>
+        
+        <br/>
+        
+        <button type="button" onClick="nextPage();">ログイン</button>
+        
+    </form>
+	
+	<script language="JavaScript" type="text/javascript">
+	
+            function nextPage() {
+                id = document.login_form.id.value //ID枠に入力された値（文字列）を定義
+                pwd = document.login_form.pass.value; //Password枠に入力された値（文字列）を定義
+                location.href = id + pwd + ".html"; //リンク先URLを作成
+            }
+            
+ 	</script>
+ 	
+ 	</div>
+
+</body>
+
+</html>
